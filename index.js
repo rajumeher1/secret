@@ -23,12 +23,12 @@ function passwordCheck(req, res, next) {
 app.use(passwordCheck);
 
 app.get("/", (req, res) => {
-    res.sendFile(__dirname + "/public/index.html");
+    res.sendFile(__dirname + "/index.html");
   });
 
 app.post("/check", (req, res, next) => {
     if (userIsAuthorised) {
-        res.sendFile(__dirname + "/public/secret.html");
+        res.sendFile(__dirname + "/secret.html");
     } else {
         // res.sendFile(__dirname + "/public/index.html");
         res.redirect("/");
